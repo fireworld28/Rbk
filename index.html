@@ -35,7 +35,7 @@
             line-height: 1.6;
         }
 
-        /* HEADER & NAVIGATION (Fidèle au schéma : Logo gauche, Liens arrondis centre, Loupe droite) */
+        /* HEADER & NAVIGATION */
         header {
             position: fixed;
             top: 0;
@@ -51,7 +51,6 @@
             align-items: center;
         }
 
-        /* LOGO IMAGE (Exactement votre fichier image) */
         .logo-container {
             display: flex;
             align-items: center;
@@ -59,7 +58,7 @@
         }
 
         .rbk-logo-img {
-            height: 75px; /* Hauteur optimale pour la lisibilité de votre logo */
+            height: 75px; 
             width: auto;
             object-fit: contain;
             transition: transform 0.3s ease;
@@ -69,7 +68,6 @@
             transform: scale(1.03);
         }
 
-        /* LIENS CENTRAUX ARRONDIS (Pill buttons conformes au schéma manuscrit) */
         nav {
             flex-grow: 1;
             display: flex;
@@ -103,7 +101,7 @@
             box-shadow: 0 4px 15px rgba(225, 26, 26, 0.3);
         }
 
-        /* MENU DÉROULANT - NOS SERVICES */
+        /* MENU DÉROULANT */
         .nav-dropdown {
             position: relative;
         }
@@ -134,7 +132,7 @@
             border-radius: 18px;
             padding: 10px;
             padding-top: 20px;
-            margin-top: -8px; /* chevauchement invisible pour combler le gap */
+            margin-top: -8px; 
             min-width: 230px;
             opacity: 0;
             visibility: hidden;
@@ -172,7 +170,6 @@
             background: #1e1e1e !important;
             color: #ffffff !important;
             border: none !important;
-            box-shadow: none !important;
         }
 
         .dropdown-menu a .service-icon {
@@ -187,7 +184,6 @@
             font-size: 13px;
             color: var(--rbk-red);
             flex-shrink: 0;
-            transition: background 0.2s ease;
         }
 
         .dropdown-menu a:hover .service-icon {
@@ -202,7 +198,7 @@
             margin: 6px 8px;
         }
 
-        /* SECTION HERO (ACCUEIL) */
+        /* SECTION HERO */
         .hero {
             height: 90vh;
             display: flex;
@@ -248,10 +244,7 @@
         }
 
         @keyframes heroLoad {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .scroll-indicator {
@@ -263,63 +256,52 @@
             text-align: center;
         }
 
-        /* SECTION PRÉSENTATION (Espace de page maximisé sans conteneurs restrictifs) */
+        /* SECTION PRÉSENTATION */
         .section-presentation-container {
-            padding: 120px 4%;
+            padding: 120px 4% 140px 4%;
             width: 100%;
-            max-width: 100%; 
-            margin: 0 auto;
         }
 
         .section-header {
             margin-bottom: 30px;
-            text-align: center; /* Centrage horizontal du titre de la section */
+            text-align: center;
         }
 
         .section-header h2 {
             font-size: 54px;
             font-weight: 800;
             color: #ffffff;
-            display: inline-block; /* Permet un centrage correct */
         }
 
-        /* Texte d'introduction générale du schéma (centré pour l'harmonie) */
         .presentation-intro-text {
             font-size: 22px;
             color: var(--text-muted);
             max-width: 1200px;
-            margin: 0 auto 90px auto; /* Centrage horizontal du paragraphe */
+            margin: 0 auto 90px auto;
             text-align: center;
             line-height: 1.8;
             font-weight: 300;
         }
 
-        /* Structure des lignes verticaux du schéma (Pas de blocs de carte, prend tout l'espace horizontal) */
         .services-vertical-stack {
             display: flex;
             flex-direction: column;
-            gap: 140px; /* Grand espacement vertical pour aérer les contenus */
+            gap: 140px;
         }
 
         .service-row {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Division parfaite 50/50 pour maximiser l'espace */
+            grid-template-columns: 1fr 1fr;
             gap: 8%;
             align-items: center;
             padding: 0 2%;
         }
 
-        /* Classe d'inversion pour l'alternance d'après le schéma */
-        .service-row.reverse {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        /* Conteneurs images fluides et grands prenant de la hauteur */
         .block-image-container {
             width: 100%;
-            height: 480px; /* Hauteur augmentée pour de magnifiques visuels */
+            height: 480px;
             background: #111111;
-            border-radius: 32px; /* Coins arrondis mais organiques */
+            border-radius: 32px;
             overflow: hidden;
             border: 1px solid #1f1f1f;
         }
@@ -335,7 +317,6 @@
             transform: scale(1.03);
         }
 
-        /* Partie textuelle explicative agrandie */
         .block-text-content {
             display: flex;
             flex-direction: column;
@@ -343,14 +324,12 @@
         }
 
         .block-text-content h3 {
-            font-size: 44px; /* Grands titres premium */
+            font-size: 44px;
             margin-bottom: 25px;
             font-weight: 800;
             color: #ffffff;
-            display: inline-block;
         }
 
-        /* Ligne de délimitation sous le titre de chaque service */
         .block-text-content h3::after {
             content: '';
             display: block;
@@ -368,7 +347,6 @@
             font-weight: 300;
         }
 
-        /* Bouton Découvrir ovale */
         .btn-discover {
             align-self: flex-start;
             background: #161616;
@@ -391,9 +369,8 @@
             transform: translateY(-2px);
         }
 
-        /* Le bouton principal du Hero */
         .btn-main {
-            display: inline-block; /* Rend le bouton réceptif aux dimensions, paddings et transitions CSS */
+            display: inline-block;
             background-color: var(--rbk-red);
             color: white;
             padding: 14px 36px;
@@ -402,9 +379,7 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-            border: none;
-            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
         .btn-main:hover {
@@ -412,38 +387,20 @@
             box-shadow: 0 10px 20px rgba(225, 26, 26, 0.4);
         }
 
-        /* SYSTEME D'ANIMATION AU DEFILEMENT (SCROLL REVEAL EFFECTS) */
+        /* SCROLL REVEAL EFFECTS */
         .reveal {
             opacity: 0;
             transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1), transform 1s cubic-bezier(0.215, 0.61, 0.355, 1);
             will-change: transform, opacity;
         }
 
-        /* Décalages selon le sens d'apparition */
-        .reveal-left {
-            transform: translateX(-60px);
-        }
-
-        .reveal-right {
-            transform: translateX(60px);
-        }
-
-        .reveal-up {
-            transform: translateY(50px);
-        }
-
-        /* Classe active injectée via JS à l'approche de la zone */
-        .reveal.active {
-            opacity: 1;
-            transform: translate(0) scale(1);
-        }
-
-        /* Délais de transition personnalisables */
+        .reveal-left { transform: translateX(-60px); }
+        .reveal-right { transform: translateX(60px); }
+        .reveal-up { transform: translateY(50px); }
+        .reveal.active { opacity: 1; transform: translate(0); }
         .delay-1 { transition-delay: 0.15s; }
-        .delay-2 { transition-delay: 0.3s; }
-        .delay-3 { transition-delay: 0.45s; }
 
-        /* BOUTON RETOUR EN HAUT (Bas gauche - comme demandé) */
+        /* BACK TO TOP */
         .back-to-top {
             position: fixed;
             bottom: 30px;
@@ -476,10 +433,9 @@
         .back-to-top:hover {
             transform: translateY(-5px);
             background-color: #ff3333;
-            box-shadow: 0 6px 20px rgba(225, 26, 26, 0.6);
         }
 
-        /* FOOTER (Strictement structuré d'après vos schémas) */
+        /* FOOTER */
         footer {
             background: #050505;
             padding: 100px 6% 50px 6%;
@@ -495,14 +451,13 @@
             margin-bottom: 80px;
         }
 
-        /* Pied gauche : Mentions légales, À Propos, Politiques */
         .footer-left-content {
             display: grid;
             grid-template-columns: 1fr 1.2fr;
             gap: 60px;
         }
 
-        .footer-nav-col h4 {
+        .footer-nav-col h4, .footer-right-content h4, .footer-about-box h4 {
             font-size: 20px;
             color: #ffffff;
             margin-bottom: 30px;
@@ -512,7 +467,7 @@
             padding-bottom: 12px;
         }
 
-        .footer-nav-col h4::after {
+        .footer-nav-col h4::after, .footer-right-content h4::after, .footer-about-box h4::after {
             content: '';
             position: absolute;
             left: 0;
@@ -522,72 +477,27 @@
             background: var(--rbk-red);
         }
 
-        .footer-nav-col ul {
-            list-style: none;
-        }
-
-        .footer-nav-col ul li {
-            margin-bottom: 18px;
-        }
-
+        .footer-nav-col ul { list-style: none; }
+        .footer-nav-col ul li { margin-bottom: 18px; }
         .footer-nav-col ul li a {
             color: var(--text-muted);
             text-decoration: none;
             font-size: 16px;
             transition: color 0.3s ease;
         }
+        .footer-nav-col ul li a:hover { color: var(--rbk-red); }
 
-        .footer-nav-col ul li a:hover {
-            color: var(--rbk-red);
-        }
+        .footer-about-box { color: var(--text-muted); font-size: 16px; }
+        .footer-about-box p { margin-bottom: 25px; }
 
-        .footer-about-box {
-            color: var(--text-muted);
-            font-size: 16px;
-        }
-
-        .footer-about-box p {
-            margin-bottom: 25px;
-        }
-
-        /* Pied droit : Réseaux (LinkedIn, Instagram, TikTok) */
         .footer-right-content {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            justify-content: flex-start;
         }
 
-        .footer-right-content h4 {
-            font-size: 20px;
-            color: #ffffff;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
-            padding-bottom: 12px;
-        }
-
-        .footer-right-content h4::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 40px;
-            height: 2px;
-            background: var(--rbk-red);
-        }
-
-        .footer-right-content p {
-            color: var(--text-muted);
-            font-size: 16px;
-            margin-bottom: 30px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 20px;
-        }
+        .footer-right-content p { color: var(--text-muted); font-size: 16px; margin-bottom: 30px; }
+        .social-links { display: flex; gap: 20px; }
 
         .social-btn {
             width: 56px;
@@ -607,14 +517,11 @@
         .social-btn:hover {
             background: var(--rbk-red);
             border-color: var(--rbk-red);
-            color: #ffffff;
             transform: translateY(-4px);
             box-shadow: 0 8px 20px rgba(225, 26, 26, 0.4);
         }
 
         .footer-bottom {
-            max-width: 100%;
-            margin: 0 auto;
             border-top: 1px solid #111111;
             padding-top: 40px;
             display: flex;
@@ -624,75 +531,37 @@
             font-size: 15px;
         }
 
-        /* ANIMATIONS */
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
             40% { transform: translateY(-10px); }
             60% { transform: translateY(-5px); }
         }
 
-        /* RESPONSIVE DESIGN */
+        /* RESPONSIVE */
         @media (max-width: 1024px) {
-            header {
-                padding: 15px 4%;
-            }
-            nav ul {
-                gap: 10px;
-            }
-            nav ul li a {
-                padding: 8px 16px;
-                font-size: 14px;
-            }
-            .service-row, .service-row.reverse {
-                grid-template-columns: 1fr;
-                gap: 50px;
-                padding: 0;
-            }
-            .block-image-container {
-                height: 380px;
-            }
-            .back-to-top {
-                bottom: 20px;
-                left: 20px;
-                width: 45px;
-                height: 45px;
-                font-size: 16px;
-            }
+            header { padding: 15px 4%; }
+            nav ul { gap: 10px; }
+            nav ul li a { padding: 8px 16px; font-size: 14px; }
+            .service-row { grid-template-columns: 1fr; gap: 50px; }
+            .block-image-container { height: 380px; }
         }
 
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-                padding: 15px;
-            }
-            nav {
-                width: 100%;
-            }
-            nav ul {
-                width: 100%;
-                justify-content: center;
-                flex-wrap: wrap;
-            }
-            .hero h1 {
-                font-size: 48px;
-            }
-            .footer-left-content {
-                grid-template-columns: 1fr;
-            }
+            header { flex-direction: column; gap: 15px; }
+            nav ul { justify-content: center; flex-wrap: wrap; }
+            .hero h1 { font-size: 48px; }
+            .footer-left-content { grid-template-columns: 1fr; }
+            .footer-container { grid-template-columns: 1fr; gap: 50px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- 1. LE HEADER (LOGO IMAGE OFFICIEL - NAVIGATION - RECHERCHE) -->
     <header>
         <a href="#accueil" class="logo-container" aria-label="Retour à l'accueil RBK Groupe">
-            <!-- Utilisation stricte de l'image d'origine fournie par l'utilisateur -->
             <img class="rbk-logo-img" src="image_6e6606.png" alt="RBK Groupe Logo">
         </a>
 
-        <!-- Liens ronds au centre (Dessinés sur votre schéma) -->
         <nav>
             <ul>
                 <li><a href="#accueil" class="active">Accueil</a></li>
@@ -718,11 +587,11 @@
                         </a>
                     </div>
                 </li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- 2. SECTION HERO (ACCUEIL) -->
     <section class="hero" id="accueil">
         <h1>RB<span>K</span> GROUPE</h1>
         <p>Un écosystème d'excellence réunissant nos expertises sous une bannière unique.</p>
@@ -733,26 +602,21 @@
         </div>
     </section>
 
-    <!-- 3. SECTION PRÉSENTATION (Mise en page épurée et alternée d'après votre schéma 2 - Pleine Largeur) -->
     <section class="section-presentation-container" id="presentation">
         <div class="section-header reveal reveal-up">
             <h2>Présentation</h2>
         </div>
 
-        <!-- Texte d'introduction générale du schéma -->
         <p class="presentation-intro-text reveal reveal-up delay-1">
             Fidèle à notre architecture globale, RBK centralise des pôles de compétences majeurs pour offrir une réactivité maximale. Qu'il s'agisse de solutions de sécurité d'élite, de facility management ou d'innovation digitale, chaque entité du groupe répond aux mêmes exigences de qualité et de performance à travers le territoire.
         </p>
 
         <div class="services-vertical-stack">
             
-            <!-- BLOC SERVICE 1 (Image à GAUCHE, Texte à DROITE) -->
             <div class="service-row" id="service-security">
-                <!-- Gauche : Image arrondie (Glisse depuis la gauche) -->
                 <div class="block-image-container reveal reveal-left">
                     <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=80" alt="Upgrade Security">
                 </div>
-                <!-- Droite : Titre + Texte explicatif + Bouton (Glisse depuis la droite) -->
                 <div class="block-text-content reveal reveal-right delay-1">
                     <h3>Upgrade Security</h3>
                     <p>Pôle d'excellence dédié à la sécurité privée, à la surveillance humaine haut de gamme et aux technologies de contrôle d'accès. Nous concevons des plans de protection rigoureux pour sécuriser vos locaux professionnels, vos chantiers et vos événements sensibles avec une réactivité absolue.</p>
@@ -760,27 +624,21 @@
                 </div>
             </div>
 
-            <!-- BLOC SERVICE 2 (Texte à GAUCHE, Image à DROITE - Alternance) -->
-            <div class="service-row reverse" id="service-facilities">
-                <!-- Gauche : Titre + Texte explicatif + Bouton (Glisse depuis la gauche) -->
-                <div class="block-text-content reveal reveal-left delay-1">
+            <div class="service-row" id="service-facilities">
+                <div class="block-image-container reveal reveal-left">
+                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80" alt="Upgrade Facilities">
+                </div>
+                <div class="block-text-content reveal reveal-right delay-1">
                     <h3>Upgrade Facilities</h3>
                     <p>Votre partenaire privilégié pour l'hygiène, la maintenance multitechnique des bâtiments et le facility management. De l'entretien de bureaux à la gestion complexe de sites logistiques, nos équipes veillent quotidiennement à la sécurité, à la propreté et à la fluidité de vos environnements de travail.</p>
                     <a href="https://oumar0204.github.io/upgrade-facilities/" target="_blank" rel="noopener noreferrer" class="btn-discover">Découvrir</a>
                 </div>
-                <!-- Droite : Image arrondie (Glisse depuis la droite) -->
-                <div class="block-image-container reveal reveal-right">
-                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80" alt="Upgrade Facilities">
-                </div>
             </div>
 
-            <!-- BLOC SERVICE 3 (Image à GAUCHE, Texte à DROITE) -->
             <div class="service-row" id="service-digital">
-                <!-- Gauche : Image arrondie (Glisse depuis la gauche) -->
                 <div class="block-image-container reveal reveal-left">
                     <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" alt="Digital Next">
                 </div>
-                <!-- Droite : Titre + Texte explicatif + Bouton (Glisse depuis la droite) -->
                 <div class="block-text-content reveal reveal-right delay-1">
                     <h3>Digital Next</h3>
                     <p>Accélérateur de transformation numérique et de solutions numériques sur-mesure. Nous développons vos infrastructures cloud, concevons des logiciels évolutifs et déployons des stratégies de marketing technologique avancées pour positionner votre entreprise à l'avant-garde de l'innovation.</p>
@@ -791,10 +649,8 @@
         </div>
     </section>
 
-    <!-- 5. FOOTER (Strictement découpé selon le schéma manuscrit) -->
     <footer>
         <div class="footer-container">
-            <!-- Pied gauche : Mentions légales, À Propos, Politiques -->
             <div class="footer-left-content">
                 <div class="footer-nav-col">
                     <h4>Informations</h4>
@@ -812,7 +668,6 @@
                 </div>
             </div>
 
-            <!-- Pied droit : Réseaux (LinkedIn, Instagram, TikTok) -->
             <div class="footer-right-content">
                 <h4>Nos Réseaux</h4>
                 <p>Suivez l'actualité du Groupe RBK et de ses filiales au quotidien :</p>
@@ -830,14 +685,12 @@
         </div>
     </footer>
 
-    <!-- BOUTON RETOUR EN HAUT (Géré dynamiquement en JS) -->
     <button id="backToTop" class="back-to-top" aria-label="Retour en haut" title="Retourner en haut">
         <i class="fa-solid fa-chevron-up"></i>
     </button>
 
-    <!-- INTERACTION JS (Scroll Reveal, Navigation active & Retour en haut) -->
     <script>
-        // Scroll fluide vers les services depuis le dropdown (compense le header fixe)
+        // Scroll fluide vers les services depuis le dropdown
         document.querySelectorAll('.dropdown-menu a[href^="#"]').forEach(link => {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -845,29 +698,25 @@
                 const target = document.querySelector(targetId);
                 if (target) {
                     const headerHeight = document.querySelector('header').offsetHeight;
-                    const offset = 40; // marge supplémentaire au-dessus du bloc
+                    const offset = 40; 
                     const top = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - offset;
                     window.scrollTo({ top, behavior: 'smooth' });
                 }
-                // Fermer le dropdown après clic
                 document.querySelector('.nav-dropdown').classList.remove('open');
             });
         });
 
-        // Gestion du menu déroulant "Nos Services" (click/touch pour mobile)
+        // Gestion du menu déroulant sur support mobile
         const dropdown = document.querySelector('.nav-dropdown');
         const dropdownToggle = dropdown ? dropdown.querySelector('a') : null;
 
         if (dropdownToggle) {
             dropdownToggle.addEventListener('click', (e) => {
-                // Sur mobile ou si pas de hover, gérer via JS
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
                     dropdown.classList.toggle('open');
                 }
             });
-
-            // Fermer si clic en dehors
             document.addEventListener('click', (e) => {
                 if (!dropdown.contains(e.target)) {
                     dropdown.classList.remove('open');
@@ -875,51 +724,39 @@
             });
         }
 
-        // Intersection Observer pour les animations d'apparition au défilement
-        const revealOptions = {
-            threshold: 0.12,
-            rootMargin: "0px 0px -50px 0px"
-        };
-
+        // Intersection Observer pour le Scroll Reveal
+        const revealOptions = { threshold: 0.12, rootMargin: "0px 0px -50px 0px" };
         const scrollObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                    // On arrête d'observer une fois l'élément affiché pour de meilleures performances
                     observer.unobserve(entry.target);
                 }
             });
         }, revealOptions);
 
-        // Cibler tous les éléments animables
         document.querySelectorAll('.reveal').forEach(element => {
             scrollObserver.observe(element);
         });
 
-        // Gestion du bouton "Retour en haut" & de la navigation active
+        // Gestion du bouton "Retour en haut" & Menu Actif
         const backToTopBtn = document.getElementById('backToTop');
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('nav ul li a');
 
-        // Événement clic pour remonter en haut de manière fluide
         backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
         window.addEventListener('scroll', () => {
             const scrollPos = window.pageYOffset;
 
-            // Afficher ou masquer le bouton de retour en haut (seuil de 300px)
             if (scrollPos > 300) {
                 backToTopBtn.classList.add('visible');
             } else {
                 backToTopBtn.classList.remove('visible');
             }
 
-            // Gestion de l'état actif sur le menu
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
@@ -929,9 +766,12 @@
             });
 
             navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').includes(current)) {
-                    link.classList.add('active');
+                // Ne gère l'état actif au scroll que pour les ancres de cette page (ne bloque pas le lien contact.html)
+                if (link.getAttribute('href').startsWith('#')) {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
                 }
             });
         });
